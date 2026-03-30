@@ -1,0 +1,229 @@
+:root {
+    --primary: #4a6cf7;
+    --bg: #f8f9fd;
+    --card-bg: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    color: var(--text-main);
+}
+
+.header {
+    background: var(--primary);
+    /* padding: 1rem 2rem; */
+    color: white;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    /* padding: 0 20px; */
+}
+
+.section-title {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    /* margin-bottom: 20px; */
+}
+
+/* Type Grid */
+/* Type Grid - Centers the items */
+.type-grid {
+    display: flex;
+    justify-content: center; /* Centers the circles */
+    flex-wrap: wrap;
+    gap: 30px;
+    /* margin-bottom: 40px; */
+}
+
+.type-card {
+    background: var(--card-bg);
+    /* Fixed dimensions for a perfect small circle */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+    /* Centering content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    border: 2px solid transparent;
+}
+
+.type-card span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.icon-box {
+    font-size: 1.5rem; /* Makes the emoji/icon a good size */
+    margin: 0; /* Remove the bottom margin from before */
+    width: auto;
+    height: auto;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(74, 108, 247, 0.15);
+}
+
+.type-card.active {
+    border-color: #2ed573;
+    background: #f0fff4;
+    color: #2ed573;
+}
+/* Action Buttons */
+.action-grid {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background: white;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+.action-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* Calculator Card */
+.calculator-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.input-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-field input, .input-field select {
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.operator-box {
+    background: #f1f2f6;
+    /* padding: 15px; */
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.calculate-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.result-display {
+    margin-top: 30px;
+    padding: 20px;
+    border-left: 4px solid #2ed573;
+    background: #fafffb;
+}
+
+.result-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.result-row h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.operator-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+}
+
+.operator-dropdown {
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    background: #f1f2f6;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.operator-box {
+    background: #f1f2f6;
+    height: 45px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Ensure result looks clean */
+#result-unit-label {
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: lowercase;
+}

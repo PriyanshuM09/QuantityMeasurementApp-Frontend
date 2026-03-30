@@ -1,0 +1,107 @@
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.from-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 380px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 50px;
+}
+
+/* this is tabs UI */
+.choose-option {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+}
+
+.choose-option button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #888;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* The will highlight effect */
+.choose-option button.active {
+    color: rgb(42, 38, 247);
+}
+
+.choose-option button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(42, 38, 247);
+}
+
+.f-group { 
+    margin-bottom: 15px; 
+}
+label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-size: 14px; 
+}
+input { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(42, 38, 247);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: rgb(30, 25, 200);
+    box-shadow: 0 4px 15px rgba(42, 38, 247, 0.4);
+}
+
+#text-mid {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    line-height: 0.1em;
+    margin: 25px 0;
+}
+
+#text-mid span { 
+    background: #fff;
+    padding: 0 10px;
+    color: #888;
+}
+#btn-choice {
+    cursor: pointer; 
+    color: rgb(42, 38, 247); 
+    font-weight: bold; 
+}
+#btn-choice:hover {
+    text-decoration: underline; 
+}

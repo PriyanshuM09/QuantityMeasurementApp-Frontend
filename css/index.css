@@ -1,0 +1,46 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.site-header{
+    background-color: #ececec;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    height: 50px;
+}
+
+.logo h1{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.main-nav ul{
+    list-style-type: none;
+    display:flex;
+}
+
+.main-nav ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 30px 25px;
+    display: block;
+}
+.main-nav ul li a:hover{
+    color: rgb(88, 73, 255);
+    text-decoration:underline;
+    display: block;
+}
+
+.main-msg h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+}
+
+.main-msg h2{
+    font-size: smaller;
+    font-style: oblique;
+}
