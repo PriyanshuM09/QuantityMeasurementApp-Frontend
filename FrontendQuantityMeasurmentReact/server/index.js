@@ -20,7 +20,7 @@ export function createServer() {
   app.get("/api/demo", handleDemo);
 
   // Proxy to Java Backend
-  app.all("/api/*", async (req, res) => {
+  app.all("/api/:path*", async (req, res) => {
     const targetHost = process.env.VITE_API_BASE_URL || "http://localhost:8080";
     const targetPath = req.url.replace(/^\/api/, "");
     const targetUrl = `${targetHost}${targetPath}`;
